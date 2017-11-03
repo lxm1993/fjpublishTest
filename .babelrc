@@ -1,0 +1,43 @@
+{
+    "presets": [
+        ["env", { "modules": false }],
+        "stage-2"
+    ],
+    "plugins": ["transform-runtime","transform-vue-jsx"],
+    "comments": false,
+    "env": {
+        "production": {
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "browsers": ["last 2 version", "ie 10"]
+                    },
+                    "modules": false,
+                    "debug": true
+                }]
+            ],
+            "plugins": [
+                "transform-runtime",
+                "transform-object-rest-spread"
+            ]
+        },
+        "development": {
+            "presets": [
+                ["env", {
+                    "targets": {
+                        "chrome": 52
+                    },
+                    "modules": false,
+                    "debug": true
+                }]
+            ],
+            "plugins": [
+                "transform-object-rest-spread"
+            ]
+        },
+        "test": {
+          "presets": ["env", "stage-2"],
+          "plugins": [ "istanbul" ]
+        }
+    }
+}

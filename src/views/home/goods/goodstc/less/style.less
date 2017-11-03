@@ -1,0 +1,103 @@
+.sptc{
+    position: relative;
+    .box-left{
+        position: absolute;
+        left:0;
+        width:300px;
+        height:625px;
+        border:1px solid #ccc;
+        .el-form-item{
+            width:95%;
+        }
+        .flex-arrow{
+            padding: 16px 1px;
+            right: -9px;
+            top:  calc(~"50% - 16px");
+            span{
+                transform:rotate(-45deg);
+            }
+            .active{
+                transform:rotate(135deg);
+            }
+        }
+    }
+    .flex-arrow{
+        position: absolute;
+        background: #DADADA;
+        cursor: pointer;
+        span{
+            display: block;
+            width:5px;
+            height:5px;
+            border-top:1px solid #fff;
+            border-left:1px solid #fff;
+        }
+    }
+    .box-left-flex{
+        left:-320px;
+    }
+    .box-right{
+        position: absolute;
+        left:310px;
+        right:0;
+        height:625px;
+        padding:3px;
+        overflow: hidden;
+        .table-first{
+            position: absolute;
+            top:35px;
+            bottom:260px;
+            width:95%;
+            border:1px solid #ccc;
+        }
+        .div-first{
+            bottom:0 !important;
+        }
+        .div-last{
+            bottom:-250px !important;
+        }
+        >div:last-child{
+            position: absolute;
+            bottom:0;
+            width:95%;
+            height:250px;
+            border-top:1px solid #ccc;
+            .flex-arrow{
+                padding: 1px 16px;
+                top: -9px;
+                left:  calc(~"50% - 16px");
+                span{
+                    transform:rotate(-135deg);
+                }
+                .active{
+                    transform:rotate(45deg);
+                }
+            }
+        }
+    }
+    .box-right-flex{
+        left:-10px;
+    }
+    .newadd-btn{
+        position: relative;
+        ul{
+            display: none;
+            position: absolute;
+            background: #E5EBF0;
+            z-index: 9;
+            box-shadow: 3px 3px 5px #ccc;
+            li{
+                padding:10px 20px 10px 10px;
+                margin-left:20px;
+                background: #fff;
+                &:hover{
+                    color: #fff;
+                    background: #FFA004;
+                }
+            }
+        }
+        .active{
+            display: block;
+        }
+    }
+}
